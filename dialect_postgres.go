@@ -121,7 +121,7 @@ func (s postgres) CurrentDatabase() (name string) {
 }
 
 func (s postgres) LastInsertIDReturningSuffix(tableName, key string) string {
-	return fmt.Sprintf("RETURNING %v.%v", tableName, key)
+	return ""
 }
 
 func (postgres) SupportLastInsertID() bool {
