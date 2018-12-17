@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/jinzhu/inflection"
+	"github.com/carlos-gi/inflection"
 )
 
 // DefaultTableNameHandler default table name handler

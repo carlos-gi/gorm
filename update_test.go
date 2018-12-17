@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jinzhu/gorm"
+	"github.com/carlos-gi/gorm"
 )
 
 func TestUpdate(t *testing.T) {
@@ -451,13 +451,13 @@ func TestUpdatesTableWithIgnoredValues(t *testing.T) {
 
 func TestUpdateDecodeVirtualAttributes(t *testing.T) {
 	var user = User{
-		Name:     "jinzhu",
+		Name:     "carlos-gi",
 		IgnoreMe: 88,
 	}
 
 	DB.Save(&user)
 
-	DB.Model(&user).Updates(User{Name: "jinzhu2", IgnoreMe: 100})
+	DB.Model(&user).Updates(User{Name: "carlos-gi2", IgnoreMe: 100})
 
 	if user.IgnoreMe != 100 {
 		t.Errorf("should decode virtual attributes to struct, so it could be used in callbacks")
